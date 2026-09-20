@@ -1,0 +1,6 @@
+{
+  "name": "Dhozky Software House - Jasa Website Bandung",
+  "description": "Landing page jasa pembuatan website untuk bisnis lokal di Bandung seperti barbershop, kafe, klinik, dan UMKM.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

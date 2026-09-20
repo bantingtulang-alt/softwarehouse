@@ -1,0 +1,1758 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhozky Software House – Jasa Pembuatan Website Bisnis Lokal Bandung</title>
+    <meta
+      name="description"
+      content="Website sederhana untuk bisnis lokal di Bandung: barbershop, kafe, klinik, roti, UMKM. Siap dalam 7 hari, harga transparan, tombol booking WhatsApp."
+    />
+    <meta property="og:title" content="Dhozky Software House – Jasa Pembuatan Website Bisnis Lokal Bandung" />
+    <meta
+      property="og:description"
+      content="Website sederhana untuk bisnis lokal di Bandung: barbershop, kafe, klinik, dan UMKM. Siap dalam 7 hari dengan tombol booking WhatsApp."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dhozky Software House – Jasa Pembuatan Website Bisnis Lokal Bandung" />
+    <meta
+      name="twitter:description"
+      content="Website sederhana untuk bisnis lokal di Bandung: barbershop, kafe, klinik, dan UMKM. Siap dalam 7 hari."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Dhozky Software House",
+        "description": "Jasa pembuatan website sederhana dan cepat untuk bisnis lokal di Bandung seperti barbershop, kafe, klinik, dan UMKM.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bandung",
+          "addressRegion": "Jawa Barat",
+          "addressCountry": "ID"
+        },
+        "priceRange": "Rp 1.500.000 - Rp 5.500.000"
+      }
+    </script>
+
+    <style>
+      /* CSS Variables & Theming */
+      :root {
+        --bg: #F2F5F7;
+        --surface: #FFFFFF;
+        --text: #16233B;
+        --text-muted: #55627A;
+        --border: #D3DBE4;
+        --blue: #2A55E5;
+        --gold: #F2B441;
+        --green: #17803F;
+        --green-hover: #136a34;
+        --dark-section: #16233B;
+        --dark-section-text: #F2F5F7;
+        --radius-btn: 10px;
+        --font-heading: "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
+        --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        --container-max: 1120px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0E1626;
+          --surface: #17233A;
+          --text: #E8EDF5;
+          --text-muted: #8E9DB8;
+          --border: #2A3A55;
+          --blue: #8AA5FF;
+          --gold: #F2B441;
+          --green: #17803F;
+          --green-hover: #136a34;
+          --dark-section: #1E3054;
+          --dark-section-text: #F2F5F7;
+        }
+      }
+
+      /* Base Reset & Typography */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 1rem;
+        line-height: 1.65;
+        text-align: left;
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+
+      /* Headings */
+      h1, h2, h3, h4 {
+        font-family: var(--font-heading);
+        color: var(--text);
+        text-align: left;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 4.5vw, 3.9rem);
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+      }
+
+      h2 {
+        font-size: clamp(1.75rem, 3.2vw, 2.6rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+
+      p {
+        max-width: 60ch;
+        text-align: left;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Accessibility & Focus */
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid var(--blue);
+        outline-offset: 3px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Container */
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 24px;
+        border-radius: var(--radius-btn);
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        text-align: center;
+        transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+      }
+
+      .btn-green {
+        background-color: var(--green);
+        color: #FFFFFF;
+        border-color: var(--green);
+      }
+
+      .btn-green:hover {
+        background-color: var(--green-hover);
+        border-color: var(--green-hover);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        color: var(--text);
+        border-color: var(--border);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--surface);
+        border-color: var(--text);
+      }
+
+      .btn-header {
+        min-height: 48px;
+        padding: 0 18px;
+        font-size: 0.925rem;
+      }
+
+      /* Section Divider */
+      .section-divider {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section-padding {
+        padding-top: clamp(56px, 7vw, 104px);
+        padding-bottom: clamp(56px, 7vw, 104px);
+      }
+
+      /* 1. Header */
+      header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background-color: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 68px;
+      }
+
+      .logo-wrap {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-heading);
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .logo-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background-color: #16233B;
+        border-radius: 6px;
+        color: var(--gold);
+        font-size: 0.85rem;
+        font-family: monospace;
+        font-weight: 700;
+      }
+
+      .nav-desktop {
+        display: none;
+        align-items: center;
+        gap: 28px;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+      }
+
+      .nav-desktop a {
+        transition: color 0.15s ease;
+      }
+
+      .nav-desktop a:hover {
+        color: var(--text);
+      }
+
+      @media (min-width: 768px) {
+        .nav-desktop {
+          display: flex;
+        }
+      }
+
+      /* 2. Hero Section */
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      @media (min-width: 960px) {
+        .hero-grid {
+          grid-template-columns: 1.1fr 0.9fr;
+          gap: 56px;
+        }
+      }
+
+      .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-sub {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+      }
+
+      .hero-btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 1.25rem;
+      }
+
+      .hero-note {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+
+      /* Hero Interactive Card */
+      .hero-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .interactive-card {
+        background-color: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .barber-pole-bar {
+        height: 16px;
+        width: 100%;
+        background: repeating-linear-gradient(
+          -45deg,
+          #2A55E5,
+          #2A55E5 12px,
+          #FFFFFF 12px,
+          #FFFFFF 24px,
+          #D92B2B 24px,
+          #D92B2B 36px,
+          #FFFFFF 36px,
+          #FFFFFF 48px
+        );
+      }
+
+      .card-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .biz-name {
+        font-family: var(--font-heading);
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .rating-line {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.9rem;
+      }
+
+      .star-icon {
+        color: var(--gold);
+        display: inline-block;
+      }
+
+      .biz-meta {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+      }
+
+      .biz-hours {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .green-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--green);
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .chips-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 4px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        background-color: var(--bg);
+        color: var(--text);
+      }
+
+      .chip-website {
+        transition: all 0.2s ease;
+      }
+
+      .chip-website.is-empty {
+        border-style: dashed;
+        color: var(--text-muted);
+        background-color: transparent;
+      }
+
+      .chip-website.is-active {
+        border-style: solid;
+        border-color: var(--blue);
+        background-color: var(--blue);
+        color: #FFFFFF;
+      }
+
+      /* Hero Toggle Switch */
+      .hero-switch-container {
+        display: flex;
+        background-color: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-btn);
+        padding: 4px;
+        gap: 4px;
+      }
+
+      .switch-btn {
+        flex: 1;
+        min-height: 48px;
+        padding: 8px 14px;
+        border-radius: 8px;
+        border: none;
+        background-color: transparent;
+        font-family: var(--font-body);
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.15s ease, color 0.15s ease;
+      }
+
+      .switch-btn[aria-pressed="true"] {
+        background-color: var(--blue);
+        color: #FFFFFF;
+      }
+
+      /* Dynamic Box Inside Hero Card */
+      .customer-view-box {
+        margin-top: 8px;
+        padding: 16px;
+        border-radius: 10px;
+        transition: opacity 0.28s ease, transform 0.28s ease;
+      }
+
+      .customer-view-box.anim-transition {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      .customer-view-box.anim-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .customer-view-box.view-empty {
+        border: 1px dashed var(--border);
+        background-color: rgba(211, 219, 228, 0.25);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .customer-view-box.view-empty {
+          background-color: rgba(42, 58, 85, 0.35);
+        }
+      }
+
+      .customer-view-box.view-active {
+        border: 1px solid var(--border);
+        background-color: var(--bg);
+      }
+
+      .view-box-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 8px;
+      }
+
+      .view-box-text {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+
+      .active-service-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.875rem;
+        margin-bottom: 12px;
+      }
+
+      .active-service-list li {
+        display: flex;
+        justify-content: space-between;
+        color: var(--text);
+      }
+
+      .imitation-booking-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 38px;
+        background-color: var(--green);
+        color: #FFFFFF;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        pointer-events: none;
+      }
+
+      .card-caption {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-align: left;
+      }
+
+      /* 3. Section: Semua yang dicari pelanggan sebelum datang */
+      .two-col-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      @media (min-width: 840px) {
+        .two-col-layout {
+          grid-template-columns: 1fr 1.3fr;
+          gap: 64px;
+        }
+      }
+
+      .feature-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .feature-item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .feature-item:first-child {
+        padding-top: 0;
+      }
+
+      .feature-title {
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: var(--text);
+        margin-bottom: 6px;
+      }
+
+      .feature-desc {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+
+      /* 4. Section: Contoh konsep tampilan */
+      .mockups-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 40px;
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: 768px) {
+        .mockups-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+      }
+
+      .mockup-card-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .browser-window {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 290px;
+      }
+
+      .browser-header {
+        background-color: rgba(0, 0, 0, 0.08);
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .browser-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.25);
+      }
+
+      .browser-content {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .mockup-biz {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+
+      .mockup-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 14px;
+      }
+
+      .mockup-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.8rem;
+        margin-bottom: 16px;
+      }
+
+      .mockup-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: default;
+        pointer-events: none;
+      }
+
+      .mockup-caption {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+      }
+
+      /* Mockup 1: Barbershop */
+      .browser-barber {
+        background-color: #1B1B1F;
+        border-color: #333338;
+      }
+      .browser-barber .browser-header {
+        background-color: #141416;
+        border-bottom-color: #27272C;
+      }
+      .browser-barber .browser-dot {
+        background-color: #44444A;
+      }
+      .browser-barber .mockup-biz {
+        color: var(--gold);
+        font-family: Georgia, serif;
+      }
+      .browser-barber .mockup-title {
+        color: #F5EFEB;
+        font-family: Georgia, serif;
+      }
+      .browser-barber .mockup-list {
+        color: #C8C2BC;
+      }
+      .browser-barber .mockup-btn {
+        background-color: var(--gold);
+        color: #16233B;
+        border-radius: 0;
+      }
+
+      /* Mockup 2: Kafe */
+      .browser-cafe {
+        background-color: #E9F0E4;
+        border-color: #D3E0CC;
+      }
+      .browser-cafe .browser-header {
+        background-color: #DFE8D9;
+        border-bottom-color: #D3E0CC;
+      }
+      .browser-cafe .browser-dot {
+        background-color: #9DB392;
+      }
+      .browser-cafe .mockup-biz {
+        color: #2C5E3B;
+      }
+      .browser-cafe .mockup-title {
+        color: #1A3823;
+      }
+      .browser-cafe .mockup-list {
+        color: #31533B;
+      }
+      .browser-cafe .mockup-btn {
+        background-color: #2C5E3B;
+        color: #FFFFFF;
+        border-radius: 9999px;
+      }
+
+      /* Mockup 3: Klinik */
+      .browser-clinic {
+        background-color: #EAF3FB;
+        border-color: #D3E4F5;
+      }
+      .browser-clinic .browser-header {
+        background-color: #DFECF8;
+        border-bottom-color: #D3E4F5;
+      }
+      .browser-clinic .browser-dot {
+        background-color: #98B8DC;
+      }
+      .browser-clinic .mockup-biz {
+        color: var(--blue);
+      }
+      .browser-clinic .mockup-title {
+        color: #103663;
+      }
+      .browser-clinic .mockup-list {
+        color: #2C4F77;
+      }
+      .browser-clinic .mockup-btn {
+        background-color: #2A55E5;
+        color: #FFFFFF;
+        border-radius: 8px;
+      }
+
+      .mockup-disclaimer {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 16px;
+      }
+
+      /* 5. Section: Empat langkah */
+      .steps-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-top: 48px;
+        position: relative;
+      }
+
+      @media (min-width: 768px) {
+        .steps-grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
+        }
+
+        /* Connecting horizontal line on desktop */
+        .steps-grid::before {
+          content: "";
+          position: absolute;
+          top: 20px;
+          left: 36px;
+          right: 36px;
+          height: 2px;
+          background-color: var(--border);
+          z-index: 0;
+        }
+      }
+
+      .step-item {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .step-number {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-color: #16233B;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+        border: 2px solid var(--surface);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .step-number {
+          background-color: #8AA5FF;
+          color: #0E1626;
+          border-color: var(--bg);
+        }
+      }
+
+      .step-title {
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: var(--text);
+        margin-bottom: 8px;
+      }
+
+      .step-desc {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.55;
+      }
+
+      /* 6. Section: Paket */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        align-items: stretch;
+        margin-top: 48px;
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: 960px) {
+        .pricing-grid {
+          grid-template-columns: 1fr 1.08fr 1fr;
+          gap: 20px;
+        }
+      }
+
+      .pricing-card {
+        border-radius: 14px;
+        padding: 32px 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        border: 1px solid var(--border);
+        background-color: var(--surface);
+      }
+
+      .pricing-card.is-featured {
+        background-color: var(--dark-section);
+        color: var(--dark-section-text);
+        border-color: transparent;
+      }
+
+      .pricing-card.is-featured h3,
+      .pricing-card.is-featured .price-amount {
+        color: #FFFFFF;
+      }
+
+      .pricing-card.is-featured .package-desc,
+      .pricing-card.is-featured .pricing-feature-item {
+        color: #D3DBE4;
+      }
+
+      .badge-recommend {
+        align-self: flex-start;
+        background-color: var(--gold);
+        color: #16233B;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+      }
+
+      .package-name {
+        margin-bottom: 6px;
+      }
+
+      .package-desc {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-bottom: 20px;
+      }
+
+      .price-block {
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 20px;
+      }
+
+      .pricing-card.is-featured .price-block {
+        border-bottom-color: rgba(255, 255, 255, 0.15);
+      }
+
+      .price-amount {
+        font-family: var(--font-heading);
+        font-size: 2.1rem;
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.1;
+      }
+
+      .features-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+        flex: 1;
+      }
+
+      .pricing-feature-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 0.95rem;
+        color: var(--text);
+      }
+
+      .check-icon {
+        flex-shrink: 0;
+        width: 18px;
+        height: 18px;
+        margin-top: 3px;
+        color: var(--green);
+      }
+
+      .pricing-card.is-featured .check-icon {
+        color: var(--gold);
+      }
+
+      .pricing-card .btn {
+        width: 100%;
+      }
+
+      .pricing-note {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+
+      /* 7. Section: FAQ Accordion */
+      .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 36px;
+        max-width: 800px;
+      }
+
+      details.faq-item {
+        background-color: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      summary.faq-question {
+        padding: 20px 24px;
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: var(--text);
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+      }
+
+      summary.faq-question::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-icon {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--text-muted);
+        transition: transform 0.2s ease;
+        line-height: 1;
+        margin-left: 12px;
+        flex-shrink: 0;
+      }
+
+      details.faq-item[open] summary .faq-icon {
+        transform: rotate(45deg);
+      }
+
+      .faq-answer {
+        padding: 0 24px 22px 24px;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.65;
+      }
+
+      /* 8. Final CTA (Full Width, Dark) */
+      .final-cta {
+        background-color: var(--dark-section);
+        color: var(--dark-section-text);
+      }
+
+      .final-cta-inner {
+        padding-top: clamp(60px, 8vw, 96px);
+        padding-bottom: clamp(60px, 8vw, 96px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .final-cta h2 {
+        color: #FFFFFF;
+        max-width: 24ch;
+      }
+
+      .final-cta p {
+        color: #D3DBE4;
+        font-size: 1.05rem;
+      }
+
+      /* 9. Footer */
+      footer.site-footer {
+        border-top: 1px solid var(--border);
+        background-color: var(--surface);
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      @media (min-width: 640px) {
+        .footer-inner {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      /* Toast Notification */
+      .toast-msg {
+        position: fixed;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        background-color: #16233B;
+        color: #FFFFFF;
+        border: 1px solid #2A3A55;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        text-align: center;
+        max-width: 90vw;
+        white-space: normal;
+      }
+
+      .toast-msg.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Toast container -->
+    <div id="toast" class="toast-msg" role="status" aria-live="polite"></div>
+
+    <!-- 1. Header Sticky -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="#" class="logo-wrap" aria-label="Beranda Dhozky Software House">
+          <span class="logo-icon" aria-hidden="true">&lt;/&gt;</span>
+          <span id="brand-header-name">Dhozky Software House</span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navigasi Utama">
+          <a href="#isi-website">Isi website</a>
+          <a href="#contoh">Contoh</a>
+          <a href="#paket">Paket</a>
+          <a href="#faq">Tanya jawab</a>
+        </nav>
+
+        <button
+          type="button"
+          class="btn btn-green btn-header js-wa-trigger"
+          data-msg="Halo, saya ingin bertanya soal pembuatan website untuk bisnis saya."
+          aria-label="Chat WhatsApp untuk konsultasi"
+        >
+          Chat WhatsApp
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. Hero Section -->
+      <section class="section-padding section-divider" id="hero">
+        <div class="container hero-grid">
+          <!-- Text Column -->
+          <div class="hero-text">
+            <h1>Website sederhana untuk bisnis lokal, siap dalam 7 hari.</h1>
+            <p class="hero-sub">
+              Harga, jam buka, lokasi, dan tombol booking WhatsApp dalam satu link. Cocok untuk barbershop, kafe, klinik, dan usaha lokal lain di Bandung.
+            </p>
+            <div class="hero-btn-group">
+              <button
+                type="button"
+                class="btn btn-green js-wa-trigger"
+                data-msg="Halo, saya ingin minta contoh tampilan website gratis untuk bisnis saya."
+              >
+                Minta contoh tampilan gratis
+              </button>
+              <a href="#paket" class="btn btn-outline">Lihat paket</a>
+            </div>
+            <p class="hero-note">
+              Contoh tampilan gratis dan tanpa kewajiban lanjut. Anda baru membayar DP setelah setuju dengan desainnya.
+            </p>
+          </div>
+
+          <!-- Interactive Card Column -->
+          <div class="hero-card-wrapper">
+            <div class="interactive-card">
+              <div class="barber-pole-bar" aria-hidden="true"></div>
+              <div class="card-body">
+                <div class="biz-name">Barbershop Contoh</div>
+                <div class="rating-line">
+                  <span class="star-icon" aria-hidden="true">★</span>
+                  <strong>4,9</strong>
+                  <span class="biz-meta">(312 ulasan)</span>
+                </div>
+                <div class="biz-meta">Barbershop di Buah Batu, Bandung</div>
+                <div class="biz-hours">
+                  <span class="green-dot" aria-hidden="true"></span>
+                  <span>Buka, tutup pukul 21.00</span>
+                </div>
+
+                <div class="chips-row">
+                  <span class="chip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Rute
+                  </span>
+                  <span class="chip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                    Simpan
+                  </span>
+                  <span class="chip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Telepon
+                  </span>
+                  <span id="hero-web-chip" class="chip chip-website is-empty">
+                    Situs web: belum ada
+                  </span>
+                </div>
+
+                <!-- Dynamic Detail Box -->
+                <div id="customer-view" class="customer-view-box view-empty anim-in">
+                  <div class="view-box-title">Yang dilihat calon pelanggan</div>
+                  <p class="view-box-text" id="customer-view-content">
+                    Foto dan ulasan saja. Harga, layanan, dan cara booking tidak ada, jadi mereka lanjut mencari tempat lain.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Two-button Switch -->
+            <div class="hero-switch-container" role="group" aria-label="Pilihan simulasi profil bisnis">
+              <button
+                type="button"
+                id="switch-no"
+                class="switch-btn"
+                aria-pressed="true"
+              >
+                Belum ada website
+              </button>
+              <button
+                type="button"
+                id="switch-yes"
+                class="switch-btn"
+                aria-pressed="false"
+              >
+                Sudah ada website
+              </button>
+            </div>
+
+            <p class="card-caption">
+              Ilustrasi dengan data contoh. Coba klik kedua tombol di atas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Section: Semua yang dicari pelanggan sebelum datang -->
+      <section class="section-padding section-divider" id="isi-website">
+        <div class="container two-col-layout">
+          <div>
+            <h2>Semua yang dicari pelanggan sebelum datang</h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem;">
+              Website dibuat pendek dan jelas, karena pelanggan lokal biasanya hanya ingin tahu tiga hal: berapa harganya, di mana tempatnya, dan bagaimana cara memesan.
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li class="feature-item">
+              <div class="feature-title">Halaman utama yang jelas</div>
+              <div class="feature-desc">Siapa Anda, apa yang dijual, dan tombol menghubungi terlihat dalam satu layar HP.</div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-title">Daftar harga dan layanan</div>
+              <div class="feature-desc">Pelanggan tahu biaya sebelum datang, jadi pertanyaan yang sama tidak perlu dijawab berulang.</div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-title">Lokasi dan jam buka</div>
+              <div class="feature-desc">Peta, rute, dan jam buka yang selalu sama dengan info di Google.</div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-title">Tombol WhatsApp</div>
+              <div class="feature-desc">Booking atau bertanya dengan satu ketukan, pesan sudah terisi otomatis.</div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-title">Nyaman dibuka di HP</div>
+              <div class="feature-desc">Dirancang untuk layar kecil terlebih dulu.</div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-title">Siap ditemukan di Google</div>
+              <div class="feature-desc">Judul, deskripsi, dan data bisnis dasar disiapkan agar mudah dikenali mesin pencari.</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4. Section: Contoh konsep tampilan -->
+      <section class="section-padding section-divider" id="contoh">
+        <div class="container">
+          <h2>Contoh konsep tampilan</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Setiap bisnis punya suasana sendiri, jadi desainnya menyesuaikan. Tiga konsep di bawah menunjukkan arahnya.
+          </p>
+
+          <div class="mockups-grid">
+            <!-- Mockup 1: Barbershop -->
+            <div class="mockup-card-wrap">
+              <div class="browser-window browser-barber">
+                <div class="browser-header">
+                  <span class="browser-dot" aria-hidden="true"></span>
+                  <span class="browser-dot" aria-hidden="true"></span>
+                  <span class="browser-dot" aria-hidden="true"></span>
+                </div>
+                <div class="browser-content">
+                  <div>
+                    <div class="mockup-biz">Rapi Barber</div>
+                    <div class="mockup-title">Potong rapi, tanpa antre.</div>
+                    <ul class="mockup-list">
+                      <li>• Gentle Haircut — Rp 50.000</li>
+                      <li>• Shave & Hot Towel — Rp 35.000</li>
+                      <li>• Complete Grooming — Rp 80.000</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <span class="mockup-btn">Booking via WhatsApp</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mockup-caption">Gelap, tegas, harga langsung terlihat.</div>
+            </div>
+
+            <!-- Mockup 2: Kafe -->
+            <div class="mockup-card-wrap">
+              <div class="browser-window browser-cafe">
+                <div class="browser-header">
+                  <span class="browser-dot" aria-hidden="true"></span>
+                  <span class="browser-dot" aria-hidden="true"></span>
+                  <span class="browser-dot" aria-hidden="true"></span>
+                </div>
+                <div class="browser-content">
+                  <div>
+                    <div class="mockup-biz">Kopi Sudut</div>
+                    <div class="mockup-title">Ngopi santai di sudut kota.</div>
+                    <ul class="mockup-list">
+                      <li>• Kopi Susu Aren — Rp 22.000</li>
+                      <li>• Manual Brew V60 — Rp 28.000</li>
+                      <li>• Roti Bakar Cokelat — Rp 20.000</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <span class="mockup-btn">Lihat menu</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mockup-caption">Hangat dan santai, menu jadi pusat perhatian.</div>
+            </div>
+
+            <!-- Mockup 3: Klinik -->
+            <div class="mockup-card-wrap">
+              <div class="browser-window browser-clinic">
+                <div class="browser-header">
+                  <span class="browser-dot" aria-hidden="true"></span>
+                  <span class="browser-dot" aria-hidden="true"></span>
+                  <span class="browser-dot" aria-hidden="true"></span>
+                </div>
+                <div class="browser-content">
+                  <div>
+                    <div class="mockup-biz">Klinik Senyum</div>
+                    <div class="mockup-title">Dokter gigi untuk seluruh keluarga.</div>
+                    <ul class="mockup-list">
+                      <li>• Pembersihan Karang Gigi</li>
+                      <li>• Tambal Estetik & Perawatan</li>
+                      <li>• Konsultasi Gigi Anak</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <span class="mockup-btn">Buat janji</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mockup-caption">Bersih dan menenangkan, jadwal mudah dicari.</div>
+            </div>
+          </div>
+
+          <p class="mockup-disclaimer">
+            Ini rancangan konsep, bukan situs klien. Portofolio proyek nyata akan ditambahkan seiring selesainya proyek.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5. Section: Empat langkah -->
+      <section class="section-padding section-divider" id="langkah">
+        <div class="container">
+          <h2>Empat langkah sampai website Anda online</h2>
+          <div class="steps-grid">
+            <div class="step-item">
+              <div class="step-number" aria-hidden="true">1</div>
+              <div class="step-title">Chat lewat WhatsApp</div>
+              <div class="step-desc">Ceritakan usaha Anda, kirim nama bisnis dan lokasinya.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-number" aria-hidden="true">2</div>
+              <div class="step-title">Terima contoh tampilan</div>
+              <div class="step-desc">Dalam 1 sampai 2 hari, gratis, boleh berhenti di sini.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-number" aria-hidden="true">3</div>
+              <div class="step-title">Revisi dan bayar DP</div>
+              <div class="step-desc">DP 50% dibayar setelah Anda setuju dengan desain.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-number" aria-hidden="true">4</div>
+              <div class="step-title">Website online</div>
+              <div class="step-desc">Tayang dengan domain atas nama Anda, sisa pembayaran dilunasi saat semuanya sesuai.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Section: Paket -->
+      <section class="section-padding section-divider" id="paket">
+        <div class="container">
+          <h2>Pilih paket sesuai kebutuhan</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Harga sekali bayar untuk pembuatan. Perawatan bulanan bersifat opsional.
+          </p>
+
+          <div class="pricing-grid">
+            <!-- Basic -->
+            <div class="pricing-card">
+              <div>
+                <h3 class="package-name">Basic</h3>
+                <div class="package-desc">Cocok untuk profil dasar usaha lokal yang ringkas.</div>
+                <div class="price-block">
+                  <div class="price-amount">Rp 1.500.000</div>
+                </div>
+                <ul class="features-list">
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>1 halaman lengkap</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Daftar harga dan layanan</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Peta lokasi dan jam buka</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Tombol WhatsApp</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Tampilan nyaman di HP</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>2 kali revisi</span>
+                  </li>
+                </ul>
+              </div>
+              <button
+                type="button"
+                class="btn btn-outline js-wa-trigger"
+                data-msg="Halo, saya tertarik dengan paket Basic pembuatan website."
+              >
+                Pilih paket Basic
+              </button>
+            </div>
+
+            <!-- Bisnis (Rekomendasi) -->
+            <div class="pricing-card is-featured">
+              <div>
+                <span class="badge-recommend">Rekomendasi</span>
+                <h3 class="package-name">Bisnis</h3>
+                <div class="package-desc">Pilihan paling pas untuk barbershop, kafe, dan klinik.</div>
+                <div class="price-block">
+                  <div class="price-amount">Rp 3.000.000</div>
+                </div>
+                <ul class="features-list">
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Sampai 5 halaman</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Galeri foto hasil kerja</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Formulir booking ke WhatsApp</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Bantuan Google Business Profile</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Pengaturan dasar agar mudah ditemukan di Google</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>3 kali revisi</span>
+                  </li>
+                </ul>
+              </div>
+              <button
+                type="button"
+                class="btn btn-green js-wa-trigger"
+                data-msg="Halo, saya tertarik dengan paket Bisnis pembuatan website."
+              >
+                Pilih paket Bisnis
+              </button>
+            </div>
+
+            <!-- Toko Online -->
+            <div class="pricing-card">
+              <div>
+                <h3 class="package-name">Toko Online</h3>
+                <div class="package-desc">Katalog produk lengkap dengan checkout WhatsApp.</div>
+                <div class="price-block">
+                  <div class="price-amount">Rp 5.500.000</div>
+                </div>
+                <ul class="features-list">
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Katalog sampai 30 produk</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Keranjang dan pesanan lewat WhatsApp</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Halaman produk dengan foto</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Semua fitur paket Bisnis</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Panduan mengelola produk sendiri</span>
+                  </li>
+                  <li class="pricing-feature-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>3 kali revisi</span>
+                  </li>
+                </ul>
+              </div>
+              <button
+                type="button"
+                class="btn btn-outline js-wa-trigger"
+                data-msg="Halo, saya tertarik dengan paket Toko Online pembuatan website."
+              >
+                Pilih paket Toko Online
+              </button>
+            </div>
+          </div>
+
+          <p class="pricing-note">
+            Biaya domain dan hosting dibayar langsung ke penyedia dan didaftarkan atas nama Anda, jadi website sepenuhnya milik Anda. Perawatan bulanan (update konten, backup, bantuan teknis) mulai dari Rp 150.000 per bulan.
+          </p>
+        </div>
+      </section>
+
+      <!-- 7. Section: FAQ Accordion -->
+      <section class="section-padding section-divider" id="faq">
+        <div class="container">
+          <h2>Pertanyaan yang sering ditanyakan</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>Apakah saya harus punya domain dan hosting dulu?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                Tidak perlu. Saya bantu memilih dan mendaftarkannya atas nama Anda.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>Bagaimana kalau saya belum punya logo atau foto bagus?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                Mulai saja dengan foto dari HP, saya bantu merapikannya.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>Bagaimana kalau nanti harga atau jam buka berubah?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                Perubahan kecil bisa lewat WhatsApp, gratis selama masa revisi, sesudahnya lewat paket perawatan.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>Bagaimana cara pembayarannya?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                DP 50% setelah setuju dengan desain, sisanya saat website online. Transfer bank atau e-wallet.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>Apakah website ini pasti muncul di halaman pertama Google?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                Tidak ada yang bisa menjamin peringkat. Yang bisa dipastikan, website memuat semua informasi yang dicari pelanggan dan disiapkan dengan pengaturan dasar agar mudah ditemukan.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. CTA Akhir (Dark Background, Full Width) -->
+      <section class="final-cta" id="cta-akhir">
+        <div class="container final-cta-inner">
+          <h2>Ingin lihat contoh tampilan untuk bisnis Anda?</h2>
+          <p>
+            Kirim nama bisnis dan lokasinya lewat WhatsApp. Contohnya saya kirim gratis, tanpa kewajiban lanjut.
+          </p>
+          <button
+            type="button"
+            class="btn btn-green js-wa-trigger"
+            data-msg="Halo, saya ingin minta contoh tampilan website gratis untuk bisnis saya."
+          >
+            Minta contoh lewat WhatsApp
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- 9. Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div id="brand-footer-name">Dhozky Software House</div>
+        <div>Jasa pembuatan website, Bandung, Jawa Barat</div>
+      </div>
+    </footer>
+
+    <!-- Configuration and Client-Side Logic -->
+    <script>
+      var CONFIG = {
+        brand: "Dhozky Software House",
+        whatsapp: "082115181105",
+        message: "Halo, saya ingin bertanya soal pembuatan website untuk bisnis saya."
+      };
+
+      // Sinkronisasi teks brand
+      (function syncBrand() {
+        var headerBrand = document.getElementById("brand-header-name");
+        var footerBrand = document.getElementById("brand-footer-name");
+        if (headerBrand && CONFIG.brand) headerBrand.textContent = CONFIG.brand;
+        if (footerBrand && CONFIG.brand) footerBrand.textContent = CONFIG.brand;
+      })();
+
+      // Toast Notification Helper
+      var toastTimer = null;
+      function showToast(text) {
+        var toastEl = document.getElementById("toast");
+        if (!toastEl) return;
+        toastEl.textContent = text;
+        toastEl.classList.add("show");
+
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          toastEl.classList.remove("show");
+        }, 3500);
+      }
+
+      // WhatsApp Handler
+      function handleWhatsApp(customMsg) {
+        var textToSend = customMsg || CONFIG.message;
+        var phone = (CONFIG.whatsapp || "").trim();
+
+        // Jika nomor WhatsApp kosong, tampilkan toast sesuai instruksi
+        if (!phone) {
+          showToast("Halaman contoh: nomor WhatsApp belum diisi.");
+          return;
+        }
+
+        // Jika nomor sudah terisi, buat URL wa.me
+        var cleanPhone = phone.replace(/[^0-9]/g, "");
+        var url = "https://wa.me/" + cleanPhone + "?text=" + encodeURIComponent(textToSend);
+        window.open(url, "_blank", "noopener,noreferrer");
+      }
+
+      // Pasang event listener ke semua tombol WhatsApp
+      document.querySelectorAll(".js-wa-trigger").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var msg = this.getAttribute("data-msg");
+          handleWhatsApp(msg);
+        });
+      });
+
+      // Hero Interactive Switch Logic
+      var switchNo = document.getElementById("switch-no");
+      var switchYes = document.getElementById("switch-yes");
+      var webChip = document.getElementById("hero-web-chip");
+      var customerView = document.getElementById("customer-view");
+
+      function updateHeroCard(hasWebsite) {
+        if (!switchNo || !switchYes || !webChip || !customerView) return;
+
+        // Update ARIA pressed state
+        switchNo.setAttribute("aria-pressed", hasWebsite ? "false" : "true");
+        switchYes.setAttribute("aria-pressed", hasWebsite ? "true" : "false");
+
+        // Mulai transisi halus
+        customerView.classList.remove("anim-in");
+        customerView.classList.add("anim-transition");
+
+        setTimeout(function () {
+          if (hasWebsite) {
+            // Status: Sudah ada website
+            webChip.textContent = "Situs web";
+            webChip.classList.remove("is-empty");
+            webChip.classList.add("is-active");
+
+            customerView.className = "customer-view-box view-active anim-transition";
+            customerView.innerHTML =
+              '<div class="view-box-title">Yang dilihat calon pelanggan</div>' +
+              '<ul class="active-service-list">' +
+                '<li><span>Potong rambut</span> <strong>Rp 50.000</strong></li>' +
+                '<li><span>Cukur dan pijat</span> <strong>Rp 80.000</strong></li>' +
+                '<li><span>Buka setiap hari</span> <span>09.00 - 21.00</span></li>' +
+              '</ul>' +
+              '<div class="imitation-booking-btn">Booking lewat WhatsApp</div>';
+          } else {
+            // Status: Belum ada website
+            webChip.textContent = "Situs web: belum ada";
+            webChip.classList.remove("is-active");
+            webChip.classList.add("is-empty");
+
+            customerView.className = "customer-view-box view-empty anim-transition";
+            customerView.innerHTML =
+              '<div class="view-box-title">Yang dilihat calon pelanggan</div>' +
+              '<p class="view-box-text">' +
+                'Foto dan ulasan saja. Harga, layanan, dan cara booking tidak ada, jadi mereka lanjut mencari tempat lain.' +
+              '</p>';
+          }
+
+          // Munculkan kembali dengan fade dan translate
+          requestAnimationFrame(function () {
+            customerView.classList.remove("anim-transition");
+            customerView.classList.add("anim-in");
+          });
+        }, 140);
+      }
+
+      if (switchNo) {
+        switchNo.addEventListener("click", function () {
+          updateHeroCard(false);
+        });
+      }
+
+      if (switchYes) {
+        switchYes.addEventListener("click", function () {
+          updateHeroCard(true);
+        });
+      }
+    </script>
+  </body>
+</html>
