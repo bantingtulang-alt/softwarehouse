@@ -373,8 +373,18 @@ button { font-family: inherit; }
 .tabs {
   margin-top: 28px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+}
+@media (min-width: 620px) {
+  .tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 980px) {
+  .tabs {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 .tab {
   text-align: left;
@@ -397,12 +407,12 @@ button { font-family: inherit; }
 }
 .tab-name { font-family: var(--display); font-weight: 700; font-size: 1.05rem; }
 .tab-price { font-size: .82rem; font-weight: 600; }
-.tab-tag { display: none; font-size: .85rem; color: var(--muted); }
+.tab-tag { display: none; font-size: .82rem; color: var(--muted); }
 .tab[aria-selected="true"] .tab-tag { color: var(--inv-muted); }
 @media (min-width: 700px) {
-  .tab { padding: 16px 20px; }
-  .tab-name { font-size: 1.25rem; }
-  .tab-price { font-size: .95rem; }
+  .tab { padding: 14px 16px; }
+  .tab-name { font-size: 1.15rem; }
+  .tab-price { font-size: .88rem; }
   .tab-tag { display: block; }
 }
 
@@ -1107,23 +1117,33 @@ details.faq-card p {
     </div>
   </section>
 
-  <!-- 5. SIMULATOR DEMO LIVE (3 PAKET DALAM SATU LAYAR) -->
+  <!-- 5. SIMULATOR DEMO LIVE (PILIHAN 5 PAKET DALAM SATU LAYAR) -->
   <section class="simulator-sec wrap" id="contoh-live">
     <div class="sec-header">
-      <h2>Coba dulu websitenya, seperti pelanggan Anda nanti</h2>
-      <p class="sub">Pilih paket di bawah ini. Jendela peramban di samping akan langsung berubah. Anda bisa klik menu, coba galeri foto, pesan form booking, hingga coba belanja.</p>
+      <h2>Coba langsung websitenya sesuai kebutuhan Anda</h2>
+      <p class="sub">Pilih salah satu dari 5 paket di bawah ini. Jendela simulasi akan langsung menyesuaikan fitur: dari kartu nama digital, landing page, galeri portofolio, sistem booking WhatsApp, hingga toko online lengkap.</p>
     </div>
 
     <div class="tabs" role="tablist" aria-label="Pilih paket website">
+      <button class="tab" role="tab" id="tab-startup" data-pkg="startup" aria-selected="false" tabindex="-1">
+        <span class="tab-name">Startup</span>
+        <span class="tab-price">Rp 500.000</span>
+        <span class="tab-tag">Kartu digital ringkas</span>
+      </button>
       <button class="tab" role="tab" id="tab-basic" data-pkg="basic" aria-selected="true">
         <span class="tab-name">Basic</span>
-        <span class="tab-price">Rp 1.500.000</span>
+        <span class="tab-price">Rp 900.000</span>
         <span class="tab-tag">1 halaman lengkap</span>
       </button>
-      <button class="tab" role="tab" id="tab-bisnis" data-pkg="bisnis" aria-selected="false" tabindex="-1">
-        <span class="tab-name">Bisnis</span>
+      <button class="tab" role="tab" id="tab-bisnis1" data-pkg="bisnis1" aria-selected="false" tabindex="-1">
+        <span class="tab-name">Bisnis 1</span>
+        <span class="tab-price">Rp 1.500.000</span>
+        <span class="tab-tag">3 halaman + galeri</span>
+      </button>
+      <button class="tab" role="tab" id="tab-bisnis2" data-pkg="bisnis2" aria-selected="false" tabindex="-1">
+        <span class="tab-name">Bisnis 2</span>
         <span class="tab-price">Rp 3.000.000</span>
-        <span class="tab-tag">Sampai 5 halaman & booking</span>
+        <span class="tab-tag">5 halaman + booking</span>
       </button>
       <button class="tab" role="tab" id="tab-toko" data-pkg="toko" aria-selected="false" tabindex="-1">
         <span class="tab-name">Toko Online</span>
@@ -1150,32 +1170,35 @@ details.faq-card p {
     </div>
   </section>
 
-  <!-- 6. Perbandingan Ketiga Paket -->
+  <!-- 6. Perbandingan Lengkap Paket -->
   <section class="compare" id="banding">
     <div class="wrap">
-      <h2>Perbandingan lengkap ketiga paket</h2>
+      <h2>Perbandingan lengkap semua paket website</h2>
       <div class="tbl-wrap">
         <table>
           <thead>
             <tr>
               <th scope="col">Fitur Website</th>
+              <th scope="col">Paket Startup</th>
               <th scope="col">Paket Basic</th>
-              <th scope="col">Paket Bisnis (Rekomendasi)</th>
+              <th scope="col">Paket Bisnis 1</th>
+              <th scope="col">Paket Bisnis 2 (Populer)</th>
               <th scope="col">Paket Toko Online</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Biaya pembuatan (sekali bayar)</td><td>Rp 1.500.000</td><td>Rp 3.000.000</td><td>Rp 5.500.000</td></tr>
-            <tr><td>Jumlah halaman</td><td>1 Halaman Lengkap</td><td>Sampai 5 Halaman</td><td>Sampai 5 Halaman + Toko</td></tr>
-            <tr><td>Daftar harga & layanan</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td></tr>
-            <tr><td>Peta Google Maps & jam buka</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td></tr>
-            <tr><td>Tombol pesan langsung WhatsApp</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td></tr>
-            <tr><td>Galeri foto hasil kerja</td><td class="no">Tidak</td><td class="yes">Ya (Popup Zoom)</td><td class="yes">Ya (Popup Zoom)</td></tr>
-            <tr><td>Formulir booking rapi ke WhatsApp</td><td class="no">Tidak</td><td class="yes">Ya (Otomatis)</td><td class="yes">Ya (Otomatis)</td></tr>
-            <tr><td>Bantuan Google Business Profile</td><td class="no">Tidak</td><td class="yes">Ya</td><td class="yes">Ya</td></tr>
-            <tr><td>Katalog produk & varian</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Sampai 30 produk</td></tr>
-            <tr><td>Keranjang belanja & checkout WA</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya</td></tr>
-            <tr><td>Revisi gratis</td><td>2 kali</td><td>3 kali</td><td>3 kali</td></tr>
+            <tr><td>Biaya pembuatan (sekali bayar)</td><td><b>Rp 500.000</b></td><td><b>Rp 900.000</b></td><td><b>Rp 1.500.000</b></td><td><b>Rp 3.000.000</b></td><td><b>Rp 5.500.000</b></td></tr>
+            <tr><td>Struktur halaman</td><td>1 Halaman Mini</td><td>1 Halaman Lengkap</td><td>Sampai 3 Halaman</td><td>Sampai 5 Halaman</td><td>Sampai 5 Halaman + Toko</td></tr>
+            <tr><td>Daftar harga & layanan</td><td>3 Menu Utama</td><td class="yes">Lengkap</td><td class="yes">Lengkap</td><td class="yes">Lengkap + Tombol Booking</td><td class="yes">Lengkap + Tombol Booking</td></tr>
+            <tr><td>Peta Google Maps & jam buka</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td></tr>
+            <tr><td>Tombol pesan WhatsApp</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Form Booking Otomatis</td><td class="yes">Form Booking & Checkout WA</td></tr>
+            <tr><td>Galeri foto portofolio</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya (Lightbox Zoom)</td><td class="yes">Ya (Lightbox Zoom)</td><td class="yes">Ya (Lightbox Zoom)</td></tr>
+            <tr><td>Profil tentang usaha & tim</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya</td><td class="yes">Ya</td></tr>
+            <tr><td>Formulir booking reservasi</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya (Otomatis)</td><td class="yes">Ya (Otomatis)</td></tr>
+            <tr><td>Bantuan Google Business Profile</td><td class="no">Panduan</td><td class="no">Panduan</td><td class="yes">Ya dibantu</td><td class="yes">Ya dibantu</td><td class="yes">Ya dibantu</td></tr>
+            <tr><td>Katalog produk & varian</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Sampai 30 produk</td></tr>
+            <tr><td>Keranjang belanja & checkout WA</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya</td></tr>
+            <tr><td>Revisi gratis</td><td>1 kali</td><td>2 kali</td><td>2 kali</td><td>3 kali</td><td>3 kali</td></tr>
           </tbody>
         </table>
       </div>
@@ -1195,7 +1218,7 @@ details.faq-card p {
       </details>
       <details class="faq-card">
         <summary>Berapa lama website selesai dibuat?</summary>
-        <p>Paket Basic umumnya selesai dalam 3–4 hari kerja. Paket Bisnis dan Toko Online membutuhkan waktu sekitar 5–7 hari kerja setelah semua foto dan daftar harga kami terima.</p>
+        <p>Paket Startup dan Basic selesai cepat dalam 2–3 hari kerja. Paket Bisnis 1, Bisnis 2, dan Toko Online membutuhkan waktu sekitar 4–7 hari kerja setelah semua materi foto dan daftar harga kami terima.</p>
       </details>
       <details class="faq-card">
         <summary>Bagaimana jika nanti ada perubahan harga menu atau nomor telepon?</summary>
@@ -1330,27 +1353,43 @@ function toggleMapHero(hasWebsite) {
 
   var LABEL = { home: 'Beranda', layanan: 'Layanan', galeri: 'Galeri', tentang: 'Tentang', kontak: 'Booking', toko: 'Toko' };
   var PKGS = {
+    startup: {
+      name: 'Startup', price: 'Rp 500.000',
+      intro: 'Kartu nama digital ringkas dan cepat untuk usaha rintisan. Memuat info penting: kontak WhatsApp, layanan utama, jam operasional, dan peta rute Google Maps.',
+      includes: ['1 halaman mini / kartu digital', 'Profil & identitas bisnis', 'Daftar 3 layanan utama', 'Peta Google Maps & jam buka', 'Tombol WhatsApp cepat', '1 kali revisi gratis'],
+      tryIt: ['Lihat layout kartu digital yang simpel dan to-the-point.', 'Tekan tombol WhatsApp atau rute peta untuk simulasi.'],
+      hint: 'Paket paling hemat untuk usaha rintisan. Coba tekan "Chat via WhatsApp" atau tombol peta.',
+      type: 'startup'
+    },
     basic: {
-      name: 'Basic', price: 'Rp 1.500.000',
-      intro: 'Satu halaman yang memuat semua yang dicari pelanggan: layanan, harga, jam buka, lokasi, dan tombol WhatsApp.',
-      includes: ['1 halaman lengkap', 'Daftar harga dan layanan', 'Peta lokasi dan jam buka', 'Tombol WhatsApp cepat', 'Tampilan nyaman di HP', '2 kali revisi'],
-      tryIt: ['Gulir halaman dari atas sampai bawah.', 'Tekan "Booking via WhatsApp" untuk melihat simulasi pesan terisi.'],
+      name: 'Basic', price: 'Rp 900.000',
+      intro: 'Satu halaman lengkap (one-page scroll) yang memuat semua yang dicari pelanggan: pricelist komplit, jam buka, rute peta, dan tombol WhatsApp.',
+      includes: ['1 halaman lengkap (one-page scroll)', 'Daftar harga dan layanan lengkap', 'Peta rute Google Maps & jam buka', 'Tombol WhatsApp cepat', 'Tampilan responsif nyaman di HP', '2 kali revisi gratis'],
+      tryIt: ['Gulir halaman dari atas sampai bawah.', 'Tekan menu "Layanan" atau "Jam dan lokasi" untuk scroll otomatis.'],
       hint: 'Tekan "Booking via WhatsApp", lalu gulir untuk melihat harga dan lokasi.',
       nav: [['Layanan', 's-layanan'], ['Jam dan lokasi', 's-lokasi']]
     },
-    bisnis: {
-      name: 'Bisnis', price: 'Rp 3.000.000',
-      intro: 'Beberapa halaman dengan galeri hasil kerja dan formulir booking yang mengirim pesan rapi otomatis ke WhatsApp Anda.',
-      includes: ['Sampai 5 halaman', 'Galeri foto hasil kerja (bisa dizoom)', 'Formulir booking ke WhatsApp', 'Bantuan Google Business Profile', 'Pengaturan dasar Google SEO', '3 kali revisi'],
-      tryIt: ['Buka menu Galeri dan tekan salah satu foto.', 'Isi formulir di menu Booking, lalu tekan kirim.'],
+    bisnis1: {
+      name: 'Bisnis 1', price: 'Rp 1.500.000',
+      intro: 'Website multi-page terstruktur (sampai 3 halaman) dengan galeri portofolio foto hasil kerja yang bisa diperbesar (lightbox zoom) untuk meyakinkan calon pelanggan.',
+      includes: ['Sampai 3 halaman web', 'Pricelist layanan terstruktur', 'Galeri portofolio foto (lightbox zoom)', 'Peta rute Google Maps & jam operasional', 'Bantuan Google Business Profile', '2 kali revisi gratis'],
+      tryIt: ['Buka menu Galeri dan klik foto untuk melihat fitur zoom foto.', 'Buka menu Layanan dan tekan tombol Pesan pada salah satu menu.'],
+      hint: 'Buka menu Galeri dan klik salah satu foto untuk melihat fitur zoom portofolio.',
+      pages: ['home', 'layanan', 'galeri']
+    },
+    bisnis2: {
+      name: 'Bisnis 2', price: 'Rp 3.000.000',
+      intro: 'Paket paling populer untuk bisnis lokal profesional. Dilengkapi profil tim/capster dan formulir booking reservasi otomatis langsung ke WhatsApp pengelola tanpa antre.',
+      includes: ['Sampai 5 halaman lengkap', 'Galeri foto hasil kerja (bisa dizoom)', 'Formulir booking reservasi ke WhatsApp', 'Profil tentang usaha & tim/capster', 'Bantuan Google Business Profile & SEO', '3 kali revisi gratis'],
+      tryIt: ['Buka menu Booking, isi tanggal dan jam potong, lalu tekan kirim.', 'Buka menu Tentang untuk melihat profil capster/tim.'],
       hint: 'Buka menu Galeri, lalu coba isi formulir di menu Booking.',
       pages: ['home', 'layanan', 'galeri', 'tentang', 'kontak']
     },
     toko: {
       name: 'Toko Online', price: 'Rp 5.500.000',
-      intro: 'Semua fitur paket Bisnis, ditambah katalog produk dan keranjang belanja. Pesanan masuk ke WhatsApp lengkap dengan rincian belanja.',
-      includes: ['Katalog sampai 30 produk', 'Keranjang belanja interaktif', 'Checkout pesanan ke WhatsApp', 'Semua fitur paket Bisnis', 'Panduan kelola produk', '3 kali revisi'],
-      tryIt: ['Buka menu Toko, tambahkan beberapa produk.', 'Buka Keranjang, isi nama, lalu tekan pesan.'],
+      intro: 'Semua fitur paket Bisnis 2 ditambah katalog produk dan keranjang belanja interaktif. Pesanan langsung masuk ke WhatsApp pengelola dengan rincian belanja dan total harga.',
+      includes: ['Katalog sampai 30 produk', 'Keranjang belanja interaktif', 'Checkout pesanan ke WhatsApp', 'Semua fitur paket Bisnis 2', 'Panduan kelola produk', '3 kali revisi gratis'],
+      tryIt: ['Buka menu Toko, tambahkan beberapa produk.', 'Buka Keranjang, isi nama pemesan, lalu tekan kirim pesanan.'],
       hint: 'Buka menu Toko, tambahkan produk, lalu buka Keranjang.',
       pages: ['home', 'toko', 'layanan', 'galeri', 'kontak']
     }
@@ -1374,16 +1413,26 @@ function toggleMapHero(hasWebsite) {
 
   function header() {
     var p = PKGS[S.pkg], nav = '';
-    if (S.pkg === 'basic') nav = p.nav.map(function (x) { return '<button type="button" class="s-link" data-act="scroll" data-t="' + x[1] + '">' + x[0] + '</button>'; }).join('');
-    else nav = p.pages.map(function (pg) { var on = S.page === pg; return '<button type="button" class="s-link' + (on ? ' is-active' : '') + '" data-act="go" data-t="' + pg + '"' + (on ? ' aria-current="page"' : '') + '>' + LABEL[pg] + '</button>'; }).join('');
+    if (S.pkg === 'startup') {
+      nav = '<span style="font-size:.82rem;color:var(--d-muted);padding:8px 0;">Kartu Digital 1-Halaman</span>';
+    } else if (S.pkg === 'basic') {
+      nav = p.nav.map(function (x) { return '<button type="button" class="s-link" data-act="scroll" data-t="' + x[1] + '">' + x[0] + '</button>'; }).join('');
+    } else {
+      nav = p.pages.map(function (pg) { var on = S.page === pg; return '<button type="button" class="s-link' + (on ? ' is-active' : '') + '" data-act="go" data-t="' + pg + '"' + (on ? ' aria-current="page"' : '') + '>' + LABEL[pg] + '</button>'; }).join('');
+    }
     var cart = S.pkg === 'toko' ? '<button type="button" class="s-cart" data-act="cart" aria-label="Buka keranjang">Keranjang <span class="s-badge" data-cartcount>' + cartCount() + '</span></button>' : '';
     return '<header class="s-head"><div class="s-brand"><span class="s-mark" aria-hidden="true">R</span><span>Rapi Barber</span></div>' + cart + '<nav class="s-nav" aria-label="Menu website contoh">' + nav + '</nav></header>';
   }
 
   function hero() {
-    var primary = S.pkg === 'basic'
-      ? '<button type="button" class="s-btn s-btn-gold" data-act="wa-book">Booking via WhatsApp</button><button type="button" class="s-btn s-btn-line" data-act="scroll" data-t="s-layanan">Lihat harga</button>'
-      : '<button type="button" class="s-btn s-btn-gold" data-act="go" data-t="kontak">Booking sekarang</button><button type="button" class="s-btn s-btn-line" data-act="go" data-t="layanan">Lihat harga</button>';
+    var primary = '';
+    if (S.pkg === 'basic') {
+      primary = '<button type="button" class="s-btn s-btn-gold" data-act="wa-book">Booking via WhatsApp</button><button type="button" class="s-btn s-btn-line" data-act="scroll" data-t="s-layanan">Lihat harga</button>';
+    } else if (S.pkg === 'bisnis1') {
+      primary = '<button type="button" class="s-btn s-btn-gold" data-act="wa-book">Booking via WhatsApp</button><button type="button" class="s-btn s-btn-line" data-act="go" data-t="layanan">Lihat harga</button>';
+    } else {
+      primary = '<button type="button" class="s-btn s-btn-gold" data-act="go" data-t="kontak">Booking sekarang</button><button type="button" class="s-btn s-btn-line" data-act="go" data-t="layanan">Lihat harga</button>';
+    }
     return '<section class="s-sec s-hero"><span class="s-pole" aria-hidden="true"></span><p class="s-rate"><b>★★★★★</b> 4,9 dari 312 ulasan Google</p><h2 class="s-h1">Potong rapi, tanpa antre.</h2><p class="s-sub">Barbershop di Buah Batu, Bandung. Booking lewat WhatsApp, datang, langsung dilayani.</p><div class="s-actions">' + primary + '</div></section>';
   }
 
@@ -1408,12 +1457,34 @@ function toggleMapHero(hasWebsite) {
   }
 
   function ctaBand() {
-    return '<section class="s-sec s-cta"><h2 class="s-h2">Siap dirapikan?</h2><p>Pilih jam yang Anda mau, kami siapkan kursinya.</p>' +
-      (S.pkg === 'basic' ? '<button type="button" class="s-btn s-btn-gold" data-act="wa-book">Booking via WhatsApp</button>' : '<button type="button" class="s-btn s-btn-gold" data-act="go" data-t="kontak">Booking sekarang</button>') + '</section>';
+    var btn = '';
+    if (S.pkg === 'basic' || S.pkg === 'bisnis1') {
+      btn = '<button type="button" class="s-btn s-btn-gold" data-act="wa-book">Booking via WhatsApp</button>';
+    } else {
+      btn = '<button type="button" class="s-btn s-btn-gold" data-act="go" data-t="kontak">Booking sekarang</button>';
+    }
+    return '<section class="s-sec s-cta"><h2 class="s-h2">Siap dirapikan?</h2><p>Pilih jam yang Anda mau, kami siapkan kursinya.</p>' + btn + '</section>';
   }
 
   function points() {
     return '<section class="s-sec"><h2 class="s-h2">Kenapa Rapi Barber</h2><div class="s-points"><div><h3>Booking, bukan antre</h3><p>Pilih jam lewat WhatsApp dan datang sesuai jadwal.</p></div><div><h3>Harga jelas</h3><p>Semua layanan dan biayanya tertulis di website, tanpa kejutan.</p></div><div><h3>Bersih dan nyaman</h3><p>Alat disterilkan setelah tiap pelanggan dan ruangan ber-AC.</p></div></div></section>';
+  }
+
+  function pageStartup() {
+    return '<section class="s-sec s-hero" style="padding-bottom:24px;"><span class="s-pole" aria-hidden="true"></span>' +
+      '<p class="s-rate"><b>★★★★★</b> 4,9 dari 312 ulasan Google</p>' +
+      '<h2 class="s-h1">Rapi Barber Buah Batu</h2>' +
+      '<p class="s-sub">Barbershop terjangkau & berkualitas di Bandung. Cepat, rapi, dan nyaman.</p>' +
+      '<div class="s-actions">' +
+        '<button type="button" class="s-btn s-btn-gold" data-act="wa-chat">Chat via WhatsApp</button>' +
+        '<button type="button" class="s-btn s-btn-line" data-act="route">Buka Rute Maps</button>' +
+      '</div></section>' +
+      '<section class="s-sec" style="padding-top:20px;padding-bottom:20px;"><h2 class="s-h2">Layanan Utama</h2>' +
+      '<ul class="s-list">' + SERVICES.slice(0, 3).map(function (s) {
+        return '<li><div><span class="nm">' + esc(s.n) + '</span><span class="ds">' + esc(s.t) + ' (' + esc(s.d) + ')</span></div><span class="pr">' + rp(s.p) + '</span></li>';
+      }).join('') + '</ul>' +
+      '<p class="s-note">Paket Startup cocok untuk kartu nama digital hemat dengan 3 layanan utama & info kontak.</p></section>' +
+      '<section class="s-sec" style="padding-top:20px;padding-bottom:20px;">' + locationBlock() + '</section>';
   }
 
   function pageBasic() {
@@ -1469,7 +1540,8 @@ function toggleMapHero(hasWebsite) {
 
   function renderSite() {
     var body = '';
-    if (S.pkg === 'basic') body = pageBasic();
+    if (S.pkg === 'startup') body = pageStartup();
+    else if (S.pkg === 'basic') body = pageBasic();
     else if (S.page === 'home') body = pageHome();
     else if (S.page === 'layanan') body = pageLayanan();
     else if (S.page === 'galeri') body = pageGaleri();
@@ -1536,7 +1608,14 @@ function toggleMapHero(hasWebsite) {
     else if (a === 'wa-chat') waPreview('Chat via WhatsApp', 'Halo Rapi Barber, saya ingin bertanya.');
     else if (a === 'route') openDlg('Petunjuk Arah Maps', '<p>Di website sebenarnya, tombol ini otomatis membuka rute aplikasi Google Maps menuju lokasi bisnis Anda di Bandung.</p><div class="dlg-actions"><button type="button" class="s-btn s-btn-gold" data-act="close">Mengerti</button></div>');
     else if (a === 'close') dlg.close();
-    else if (a === 'book-service') { S.service = el.getAttribute('data-n'); go('kontak'); }
+    else if (a === 'book-service') {
+      if (S.pkg === 'bisnis1') {
+        waPreview('Booking Layanan via WhatsApp', 'Halo Rapi Barber, saya ingin booking layanan ' + el.getAttribute('data-n') + '. Apakah ada jadwal kosong?');
+      } else {
+        S.service = el.getAttribute('data-n');
+        go('kontak');
+      }
+    }
     else if (a === 'photo') {
       var g = GALLERY[+el.getAttribute('data-i')], c = g[1].split(',');
       openDlg(esc(g[0]), '<div class="lb-tile" style="--g:linear-gradient(135deg,' + c[0] + ',' + c[1] + ')" role="img" aria-label="Foto contoh: ' + esc(g[0]) + '"></div><p class="dlg-note">Foto hasil potong rambut / portofolio tampil tajam dan nyaman dilihat di HP.</p>');
