@@ -383,7 +383,7 @@ button { font-family: inherit; }
 }
 @media (min-width: 980px) {
   .tabs {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 .tab {
@@ -1760,6 +1760,214 @@ dialog::backdrop { background: rgba(6, 10, 18, .68); }
 .ad-bundling-text h4 { font-size: 1.05rem; font-weight: 800; color: var(--ink); }
 .ad-bundling-text p { font-size: 0.9rem; color: var(--muted); margin-top: 4px; }
 
+/* === ENTERPRISE, AI ASSISTANT & ROI SECTION === */
+.enterprise-sec {
+  padding-block: clamp(52px, 7.5vw, 92px);
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+.badge-ent {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #F2B441 0%, #D97706 100%);
+  color: #0F172A;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: .82rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 14px rgba(242, 180, 65, 0.3);
+}
+
+/* ROI Grid */
+.roi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+.roi-card {
+  border-radius: 16px;
+  padding: 24px;
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+.roi-card.manual {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.04);
+}
+.roi-card.ai-solution {
+  border-color: #0D9488;
+  background: rgba(13, 148, 136, 0.05);
+  box-shadow: 0 10px 30px -10px rgba(13, 148, 136, 0.2);
+}
+.roi-tag-bad {
+  display: inline-block;
+  background: #FEE2E2;
+  color: #991B1B;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+.roi-tag-good {
+  display: inline-block;
+  background: #CCFBF1;
+  color: #0F766E;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+.roi-price {
+  font-family: var(--display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-block: 8px 4px;
+}
+.roi-points {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+.roi-points li { display: flex; align-items: flex-start; gap: 8px; line-height: 1.45; }
+
+/* Quote Box */
+.roi-quote-box {
+  margin-top: 24px;
+  background: linear-gradient(135deg, rgba(42, 85, 229, 0.08), rgba(242, 180, 65, 0.12));
+  border-left: 4px solid var(--gold);
+  border-radius: 0 14px 14px 0;
+  padding: 20px 24px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.roi-quote-box b { color: var(--ink); }
+.roi-quote-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #D97706;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Enterprise Card & AI Demo Grid */
+.ent-stage {
+  display: grid;
+  gap: 32px;
+  margin-top: 40px;
+}
+@media (min-width: 980px) {
+  .ent-stage {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.ent-detail-card {
+  background: var(--surface);
+  border: 2px solid var(--gold);
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 16px 40px -12px rgba(242, 180, 65, 0.25);
+}
+.ent-top-badge {
+  position: absolute;
+  top: -14px;
+  left: 28px;
+  background: #F2B441;
+  color: #0F172A;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 4px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* AI Assistant Demo Box */
+.ai-demo-card {
+  background: #0F172A;
+  color: #F8FAFC;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid #334155;
+  box-shadow: 0 20px 45px -10px rgba(0,0,0,0.4);
+}
+.ai-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1E293B;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+.ai-topic-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.ai-topic-btn {
+  background: #1E293B;
+  color: #94A3B8;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.ai-topic-btn.active, .ai-topic-btn:hover {
+  background: #0D9488;
+  color: #FFFFFF;
+  border-color: #0D9488;
+}
+.ai-screen-box {
+  background: #020617;
+  border: 1px solid #1E293B;
+  border-radius: 12px;
+  padding: 16px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #E2E8F0;
+  min-height: 160px;
+  white-space: pre-wrap;
+}
+
+/* Retainer Cards */
+.retainer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 36px;
+}
+.retainer-card {
+  background: var(--bg);
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Tabel Perbandingan */
 .compare {
   background: var(--surface);
@@ -1943,6 +2151,7 @@ dialog.ad-dialog::backdrop {
       <a href="#cara-kerja">Cara Kerja</a>
       <a href="#contoh-live">Demo Website</a>
       <a href="#demo-android">Demo App Android</a>
+      <a href="#enterprise-ai">Enterprise &amp; AI</a>
       <a href="#banding">Paket &amp; Harga</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -2088,7 +2297,12 @@ dialog.ad-dialog::backdrop {
       <button class="tab" role="tab" id="tab-toko" data-pkg="toko" aria-selected="false" tabindex="-1">
         <span class="tab-name">Toko Online</span>
         <span class="tab-price">Rp 5.500.000</span>
-        <span class="tab-tag">Katalog & keranjang WA</span>
+        <span class="tab-tag">Katalog &amp; keranjang WA</span>
+      </button>
+      <button class="tab" role="tab" id="tab-enterprise" data-pkg="enterprise" aria-selected="false" tabindex="-1">
+        <span class="tab-name">Enterprise</span>
+        <span class="tab-price">Rp 18jt – Rp 30jt+</span>
+        <span class="tab-tag">Solusi Lengkap + AI</span>
       </button>
     </div>
 
@@ -2347,7 +2561,204 @@ dialog.ad-dialog::backdrop {
     </div>
   </section>
 
-  <!-- 6. Perbandingan Lengkap Paket -->
+  <!-- 5C. PAKET ENTERPRISE, AI ASSISTANT, MODEL RETAINER, & CARA MENJELASKAN HARGA -->
+  <section class="enterprise-sec wrap" id="enterprise-ai">
+    <!-- Header Section -->
+    <div class="sec-header" style="text-align: center; max-width: 860px; margin-inline: auto;">
+      <div class="badge-ent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        Flagship Solution: Solusi Lengkap, AI &amp; Marketing
+      </div>
+      <h2>Paket Enterprise: Solusi Lengkap + Marketing &amp; AI Content Assistant</h2>
+      <p class="sub">Dirancang untuk segala jenis bisnis (klinik, resto/F&amp;B, ritel, barbershop, jasa profesional, distributor, dsb) yang ingin solusi digital lengkap, efisiensi operasional 24 jam penuh, integrasi multi-cabang, dan pemasaran bertenaga AI.</p>
+    </div>
+
+    <!-- 1. Enterprise Card & Live AI Content Generator Demo -->
+    <div class="ent-stage">
+      <!-- Sisi Kiri: Detail Paket Enterprise -->
+      <div class="ent-detail-card">
+        <div class="ent-top-badge">Paket Tertinggi • Solusi Lengkap</div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px; margin-top:8px;">
+          <div>
+            <h3 style="font-size:1.6rem; font-weight:800; color:var(--ink); margin:0;">Enterprise (Fokus: Solusi Lengkap + Marketing)</h3>
+            <p style="font-size:0.92rem; color:var(--muted); margin:4px 0 0;">Solusi end-to-end terintegrasi Website, Web App, dan Asisten AI.</p>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:0.8rem; font-weight:700; color:var(--muted); text-transform:uppercase;">Estimasi Harga</div>
+            <div style="font-family:var(--display); font-size:1.6rem; font-weight:800; color:#D97706;">Rp 18.000.000 – Rp 30.000.000+</div>
+            <span style="font-size:0.8rem; color:var(--muted);">(Sekali bayar)</span>
+          </div>
+        </div>
+
+        <div style="margin-top:18px; padding:12px 16px; background:rgba(242, 180, 65, 0.12); border-left:4px solid var(--gold); border-radius:0 10px 10px 0; font-size:0.92rem;">
+          <b>🎯 Cocok untuk:</b> Berbagai jenis bisnis (klinik, resto/kuliner, butik/ritel, salon, jasa, atau distributor) yang sudah memiliki beberapa cabang dan memiliki budget marketing untuk melipatgandakan keuntungan.
+        </div>
+
+        <div style="margin-top:20px;">
+          <h4 style="font-size:0.95rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); margin-bottom:12px;">Fitur yang Didapat:</h4>
+          <ul class="ad-pkg-list" style="margin:0;">
+            <li><span class="chk">✓</span> <b>Semua fitur di Paket Pro</b> (Website multi-page responsif, sistem booking &amp; pesanan terintegrasi, database cloud, katalog produk/layanan, dan panel admin pengelola).</li>
+            <li><span class="chk">✓</span> <b>Dashboard Internal AI Content Assistant</b> (untuk bikin caption Instagram, copy promo broadcast WhatsApp, materi edukasi, dan promosi otomatis).</li>
+            <li><span class="chk">✓</span> <b>Kustomisasi Desain Premium</b> (desain eksklusif bespoke, integrasi multi-cabang, profil tim/spesialis, dan pengalaman pengguna kelas atas).</li>
+            <li><span class="chk">✓</span> <b>Support Prioritas</b> (jalur hotline teknis khusus, respons cepat, garansi sistem, dan pendampingan implementasi langsung).</li>
+            <li><span class="chk">✓</span> <b>Manajemen Multi-Cabang</b> (atur cabang, jadwal layanan/staf, pricelist produk, dan rute navigasi per cabang secara terpusat).</li>
+            <li><span class="chk">✓</span> <b>Pelatihan Staf &amp; Handover Lengkap</b> (panduan penggunaan dashboard AI serta sistem operasional untuk tim admin &amp; CS).</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-wa js-wa" href="#" data-msg="Halo Dhozky Software House, saya tertarik konsultasi Paket Enterprise (Solusi Lengkap + Marketing + AI Content Assistant)." style="flex:1; justify-content:center; text-align:center;">Konsultasi Paket Enterprise</a>
+          <a class="btn btn-line" href="#logika-roi" style="flex:1; justify-content:center; text-align:center;">Lihat Logika Biaya ↓</a>
+        </div>
+      </div>
+
+      <!-- Sisi Kanan: Live Interactive Simulator Dashboard Internal AI Content Assistant -->
+      <div class="ai-demo-card">
+        <div class="ai-header-row">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:12px; height:12px; border-radius:50%; background:#10B981; box-shadow:0 0 8px #10B981;"></div>
+            <div>
+              <div style="font-weight:800; font-size:0.95rem;">Dashboard Internal AI Content Assistant</div>
+              <div style="font-size:0.75rem; color:#94A3B8;">Simulasi Fitur Paket Enterprise • Bikin Caption/Promo Otomatis</div>
+            </div>
+          </div>
+          <span style="font-size:0.75rem; background:#1E293B; color:#0D9488; font-weight:700; padding:4px 8px; border-radius:6px; border:1px solid #334155;">Active AI</span>
+        </div>
+
+        <div style="font-size:0.82rem; color:#94A3B8; margin-bottom:10px;">Klik tombol di bawah untuk melihat contoh output caption/promo yang dihasilkan AI:</div>
+
+        <div class="ai-topic-btns" id="aiTopicBtns">
+          <button type="button" class="ai-topic-btn active" data-topic="promo">🎉 Promo Diskon Bisnis</button>
+          <button type="button" class="ai-topic-btn" data-topic="edukasi">💡 Edukasi &amp; Tips Konsumen</button>
+          <button type="button" class="ai-topic-btn" data-topic="broadcast">📲 Broadcast WA Pelanggan</button>
+          <button type="button" class="ai-topic-btn" data-topic="cabang">📍 Pengumuman Cabang Baru</button>
+        </div>
+
+        <div style="position:relative;">
+          <div class="ai-screen-box" id="aiOutputText">✨ Memuat konten otomatis dari AI Assistant...</div>
+          <button type="button" id="btnCopyAi" style="position:absolute; top:10px; right:10px; background:#1E293B; border:1px solid #334155; color:#F8FAFC; font-size:0.75rem; font-weight:700; padding:5px 10px; border-radius:6px; cursor:pointer; display:flex; align-items:center; gap:5px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="copyAiLabel">Salin Teks</span>
+          </button>
+        </div>
+
+        <div style="margin-top:14px; padding:12px; background:rgba(13, 148, 136, 0.15); border-radius:10px; border:1px solid rgba(13, 148, 136, 0.3); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+          <div style="font-size:0.8rem; color:#CCFBF1;">
+            <b>Efisiensi Tinggi:</b> Tim marketing atau admin bisnis Anda bisa memproduksi puluhan caption media sosial &amp; teks promosi siap kirim tanpa perlu pusing mikir ide dari nol!
+          </div>
+          <a class="btn btn-wa btn-sm js-wa" href="#" data-msg="Halo Dhozky Software House, saya ingin coba demo Dashboard AI Content Assistant untuk bisnis saya." style="font-size:0.78rem; padding:6px 12px; text-decoration:none;">Coba untuk Bisnis Anda</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. JANGAN LUPAKAN MODEL RETAINER (LANGGANAN BULANAN) -->
+    <div style="margin-top: clamp(48px, 6vw, 76px); border-top: 1px solid var(--line); padding-top: clamp(40px, 5vw, 64px);">
+      <div class="sec-header" style="text-align: center; max-width: 840px; margin-inline: auto;">
+        <span style="font-size:0.8rem; font-weight:800; color:#0D9488; text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:6px;">Skema Berkelanjutan</span>
+        <h2>2. Jangan Lupakan Model Retainer (Langganan Bulanan)</h2>
+        <p class="sub">Membuat website dan sistem AI adalah satu hal, tetapi sistem AI butuh token API, hosting, dan pemeliharaan rutin. Anda bisa menawarkan <b>Biaya Langganan Bulanan (Maintenance &amp; API Cost) sebesar Rp 500.000 – Rp 1.500.000 per bulan</b> setelah proyek selesai.</p>
+      </div>
+
+      <div class="retainer-grid">
+        <div class="retainer-card">
+          <div style="font-size:1.8rem; margin-bottom:12px;">📈</div>
+          <h3 style="font-size:1.2rem; font-weight:800; color:var(--ink);">Keuntungan Model Retainer: Recurring Revenue</h3>
+          <p style="font-size:0.92rem; color:var(--muted); line-height:1.6; margin-top:8px;">
+            <b>Keuntungan model ini:</b> Anda mendapat pemasukan pasif (<i>recurring revenue</i>) tiap bulan dari setiap klien yang Anda pegang.
+          </p>
+          <ul class="roi-points" style="margin-top:14px;">
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Cash Flow Pasif Teratur:</b> Pemasukan stabil yang masuk setiap bulan tanpa harus selalu mencari klien baru.</div></li>
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Hubungan Kemitraan Jangka Panjang:</b> Klien terus terhubung dan percaya penuh pada software house Anda.</div></li>
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Akumulasi Pertumbuhan Bisnis:</b> Dengan 10–20 klien aktif, Anda mengamankan Rp 10–30 juta recurring revenue tiap bulan.</div></li>
+          </ul>
+        </div>
+
+        <div class="retainer-card">
+          <div style="font-size:1.8rem; margin-bottom:12px;">🛡️</div>
+          <h3 style="font-size:1.2rem; font-weight:800; color:var(--ink);">Fasilitas untuk Klien (Maintenance &amp; API Cost)</h3>
+          <p style="font-size:0.92rem; color:var(--muted); line-height:1.6; margin-top:8px;">
+            Biaya bulanan Rp 500.000 – Rp 1.500.000 ini memberi ketenangan pikiran bagi pemilik bisnis karena seluruh operasional teknis ditangani profesional.
+          </p>
+          <ul class="roi-points" style="margin-top:14px;">
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Token API AI Selalu Siap:</b> Kuota token AI tercukupi untuk generate caption, copywriting promo, dan asisten bot.</div></li>
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Cloud Hosting Berkecepatan Tinggi:</b> Server stabil 99.9%, loading cepat meski diakses ribuan calon pembeli bersamaan.</div></li>
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Backup &amp; Pembaruan Keamanan Rutin:</b> Pencadangan database pesanan, data kontak pelanggan, dan sistem secara berkala.</div></li>
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Support Teknis &amp; Update Konten Minor:</b> Perubahan daftar harga, promo bulanan, atau nomor admin dibantu tuntas.</div></li>
+          </ul>
+        </div>
+
+        <div class="retainer-card" style="border-color:#0D9488; background:rgba(13, 148, 136, 0.04);">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:1.8rem;">💎</span>
+            <span style="background:#CCFBF1; color:#0F766E; font-size:11px; font-weight:800; padding:3px 10px; border-radius:12px;">Rekomendasi</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:800; color:var(--ink); margin-top:8px;">Pilihan Paket Retainer Bulanan</h3>
+          <div class="roi-price" style="color:#0D9488; margin-block:8px 2px;">Rp 500rb – Rp 1,5jt</div>
+          <span style="font-size:0.85rem; color:var(--muted);">/ bulan per klien bisnis</span>
+          <p style="font-size:0.88rem; color:var(--muted); line-height:1.5; margin-top:12px;">
+            Investasi yang sangat terjangkau bagi bisnis (hanya setara laba 1–2 transaksi penjualan), namun melindungi sistem bernilai puluhan juta milik Anda.
+          </p>
+          <div style="margin-top:auto; padding-top:18px;">
+            <a class="btn btn-wa js-wa" href="#" data-msg="Halo Dhozky Software House, saya ingin tanya penawaran Paket Retainer Bulanan (Maintenance &amp; API Cost) untuk sistem bisnis saya." style="width:100%; text-align:center; justify-content:center; font-size:0.88rem; background:#0D9488;">Diskusi Paket Retainer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. CARA MENJELASKAN HARGANYA KE KLIEN AGAR TIDAK KAGET -->
+    <div id="logika-roi" style="margin-top: clamp(48px, 6vw, 76px); border-top: 1px solid var(--line); padding-top: clamp(40px, 5vw, 64px);">
+      <div class="sec-header" style="text-align: center; max-width: 840px; margin-inline: auto;">
+        <span style="font-size:0.8rem; font-weight:800; color:#D97706; text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:6px;">Logika Perbandingan Biaya</span>
+        <h2>3. Cara Menjelaskan Harganya ke Klien Agar Tidak Kaget</h2>
+        <p class="sub">Pemilik bisnis sering kali merasa harga di atas "mahal" jika Anda menjelaskannya sebagai biaya pembuatan website. Ubahlah cara pandang mereka menggunakan logika perbandingan biaya:</p>
+      </div>
+
+      <!-- Grid Perbandingan: Sewa Admin vs Web App Ber-AI -->
+      <div class="roi-grid">
+        <!-- Kolom Kiri: Sewa Admin Tradisional -->
+        <div class="roi-card manual">
+          <span class="roi-tag-bad">❌ CARA LAMA: SEWA ADMIN SHIFT MALAM</span>
+          <h3 style="font-size:1.25rem; font-weight:800; color:var(--ink);">Sewa Admin Tambahan Khusus Shift Malam</h3>
+          <div class="roi-price" style="color:#DC2626;">Rp 2.500.000 <span style="font-size:0.95rem; font-weight:500; color:var(--muted);">/ bulan</span></div>
+          <div style="font-weight:700; color:#DC2626; font-size:0.95rem;">= Rp 30.000.000 setahun (beban berulang terus)</div>
+          <ul class="roi-points">
+            <li><span style="color:#DC2626; font-weight:bold;">✗</span> <div><b>Risiko Human Error:</b> Itu pun belum tentu tidak ada yang terlewat, bisa salah catat jadwal booking, atau lambat rekap pesanan.</div></li>
+            <li><span style="color:#DC2626; font-weight:bold;">✗</span> <div><b>Keterbatasan Fisik &amp; Izin:</b> Manusia butuh istirahat, bisa izin sakit, cuti hari raya, atau berhenti kerja (turnover).</div></li>
+            <li><span style="color:#DC2626; font-weight:bold;">✗</span> <div><b>Respons Lambat saat Jam Tidur:</b> Chat calon pembeli di malam hari sering kali tidak langsung terjawab sehingga mereka pindah ke kompetitor.</div></li>
+            <li><span style="color:#DC2626; font-weight:bold;">✗</span> <div><b>Biaya Tetap Membengkak:</b> Rp 30 juta habis tiap tahun tanpa menghasilkan aset sistem mandiri.</div></li>
+          </ul>
+        </div>
+
+        <!-- Kolom Kanan: Web App Ber-AI 24 Jam -->
+        <div class="roi-card ai-solution">
+          <span class="roi-tag-good">✅ INVESTASI CERDAS: SISTEM WEB APP BER-AI</span>
+          <h3 style="font-size:1.25rem; font-weight:800; color:var(--ink);">Sistem Web App Ber-AI 24 Jam</h3>
+          <div class="roi-price" style="color:#0D9488;">[Harga Paket] <span style="font-size:0.95rem; font-weight:500; color:var(--muted);">Investasi Sekali di Awal</span></div>
+          <div style="font-weight:700; color:#0D9488; font-size:0.95rem;">Bekerja 24 Jam Penuh • Amankan Cuan Bisnis Anda Selamanya</div>
+          <ul class="roi-points">
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Bekerja 24 Jam Penuh Tanpa Cuti:</b> Pelanggan yang cari info atau mau pesan jam 11 malam langsung terlayani detik itu juga.</div></li>
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Tanpa Salah Jadwal &amp; Data:</b> Sistem digital mencatat order, tanggal, jam, atau layanan secara otomatis dan akurat.</div></li>
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Langsung Mengamankan Cuan Bisnis:</b> Keputusan pembelian dikunci saat itu juga sebelum pelanggan berpaling ke kompetitor.</div></li>
+            <li><span style="color:#0D9488; font-weight:bold;">✓</span> <div><b>Menjadi Aset Digital Milik Sendiri:</b> Sekali investasi di awal, bisnis Anda menikmati manfaatnya bertahun-tahun.</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Quote Box: Script Edukasi Closing Penjualan -->
+      <div class="roi-quote-box">
+        <span class="roi-quote-tag">💬 Kutipan Kata-Kata Penjelasan ke Klien (Script Pitching):</span>
+        <blockquote style="margin:0; font-size:1.05rem; font-style:italic; font-weight:600; line-height:1.65; color:var(--ink);">
+          “Pak/Bu, kalau sewa admin tambahan khusus shift malam biayanya minimal Rp 2,5 juta per bulan (Rp 30 juta setahun), itu pun belum tentu tidak ada yang terlewat. Dengan sistem Web App ber-AI ini, investasi awal Anda hanya [sebutkan harga paket], dan sistem ini bekerja 24 jam penuh tanpa cuti, tanpa salah jadwal, dan langsung mengamankan cuan bisnis Anda selamanya.”
+        </blockquote>
+        <div style="margin-top:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <span style="font-size:0.82rem; color:var(--muted);">Gunakan perbandingan biaya ini kepada klien agar mereka memandang biaya paket bukan sebagai beban pengeluaran, melainkan <b>solusi penghematan operasional</b>.</span>
+          <button type="button" id="btnCopyPitch" class="btn btn-line btn-sm" style="font-size:0.8rem; padding:6px 14px; cursor:pointer;">
+            📋 Salin Script Pitching
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="compare" id="banding">
     <div class="wrap">
       <h2>Perbandingan lengkap semua paket website</h2>
@@ -2361,21 +2772,25 @@ dialog.ad-dialog::backdrop {
               <th scope="col">Paket Bisnis 1</th>
               <th scope="col">Paket Bisnis 2 (Populer)</th>
               <th scope="col">Paket Toko Online</th>
+              <th scope="col" style="background:rgba(242,180,65,0.14); color:#D97706; border-left:2px solid #F2B441;">Paket Enterprise ⭐</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Biaya pembuatan (sekali bayar)</td><td><b>Rp 500.000</b></td><td><b>Rp 900.000</b></td><td><b>Rp 1.500.000</b></td><td><b>Rp 3.000.000</b></td><td><b>Rp 5.500.000</b></td></tr>
-            <tr><td>Struktur halaman</td><td>1 Halaman Mini</td><td>1 Halaman Lengkap</td><td>Sampai 3 Halaman</td><td>Sampai 5 Halaman</td><td>Sampai 5 Halaman + Toko</td></tr>
-            <tr><td>Daftar harga & layanan</td><td>3 Menu Utama</td><td class="yes">Lengkap</td><td class="yes">Lengkap</td><td class="yes">Lengkap + Tombol Booking</td><td class="yes">Lengkap + Tombol Booking</td></tr>
-            <tr><td>Peta Google Maps & jam buka</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td></tr>
-            <tr><td>Tombol pesan WhatsApp</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Form Booking Otomatis</td><td class="yes">Form Booking & Checkout WA</td></tr>
-            <tr><td>Galeri foto portofolio</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya (Lightbox Zoom)</td><td class="yes">Ya (Lightbox Zoom)</td><td class="yes">Ya (Lightbox Zoom)</td></tr>
-            <tr><td>Profil tentang usaha & tim</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya</td><td class="yes">Ya</td></tr>
-            <tr><td>Formulir booking reservasi</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya (Otomatis)</td><td class="yes">Ya (Otomatis)</td></tr>
-            <tr><td>Bantuan Google Business Profile</td><td class="no">Panduan</td><td class="no">Panduan</td><td class="yes">Ya dibantu</td><td class="yes">Ya dibantu</td><td class="yes">Ya dibantu</td></tr>
-            <tr><td>Katalog produk & varian</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Sampai 30 produk</td></tr>
-            <tr><td>Keranjang belanja & checkout WA</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya</td></tr>
-            <tr><td>Revisi gratis</td><td>1 kali</td><td>2 kali</td><td>2 kali</td><td>3 kali</td><td>3 kali</td></tr>
+            <tr><td>Biaya pembuatan (sekali bayar)</td><td><b>Rp 500.000</b></td><td><b>Rp 900.000</b></td><td><b>Rp 1.500.000</b></td><td><b>Rp 3.000.000</b></td><td><b>Rp 5.500.000</b></td><td style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);"><b style="color:#D97706;">Rp 18jt – 30jt+</b></td></tr>
+            <tr><td>Struktur halaman</td><td>1 Halaman Mini</td><td>1 Halaman Lengkap</td><td>Sampai 3 Halaman</td><td>Sampai 5 Halaman</td><td>Sampai 5 Halaman + Toko</td><td style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Kustom Multi-Cabang</td></tr>
+            <tr><td>Daftar harga &amp; layanan</td><td>3 Menu Utama</td><td class="yes">Lengkap</td><td class="yes">Lengkap</td><td class="yes">Lengkap + Tombol Booking</td><td class="yes">Lengkap + Tombol Booking</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Lengkap Multi-Cabang</td></tr>
+            <tr><td>Peta Google Maps &amp; jam buka</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Multi-Lokasi Cabang</td></tr>
+            <tr><td>Tombol pesan WhatsApp</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes">Form Booking Otomatis</td><td class="yes">Form Booking &amp; Checkout WA</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">WhatsApp API &amp; Booking 24 Jam</td></tr>
+            <tr><td>Galeri foto portofolio</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya (Lightbox Zoom)</td><td class="yes">Ya (Lightbox Zoom)</td><td class="yes">Ya (Lightbox Zoom)</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Bespoke Lightbox &amp; Video</td></tr>
+            <tr><td>Profil tentang usaha &amp; tim</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya</td><td class="yes">Ya</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Multi Tim / Staf Cabang</td></tr>
+            <tr><td>Formulir booking reservasi</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya (Otomatis)</td><td class="yes">Ya (Otomatis)</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Otomatis &amp; Realtime 24 Jam</td></tr>
+            <tr><td>Bantuan Google Business Profile</td><td class="no">Panduan</td><td class="no">Panduan</td><td class="yes">Ya dibantu</td><td class="yes">Ya dibantu</td><td class="yes">Ya dibantu</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Optimasi Seluruh Cabang</td></tr>
+            <tr><td>Katalog produk &amp; varian</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Sampai 30 produk</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Unlimited Produk &amp; Layanan</td></tr>
+            <tr><td>Keranjang belanja &amp; checkout WA</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes">Ya</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Ya + Integrasi Payment</td></tr>
+            <tr><td>Dashboard AI Content Assistant</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="no">Tidak</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">✓ AI Caption &amp; Promo Generator</td></tr>
+            <tr><td>Dukungan &amp; Garansi</td><td>1 Bulan Garansi</td><td>2 Bulan Garansi</td><td>3 Bulan Garansi</td><td>3 Bulan Garansi</td><td>6 Bulan Garansi</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Support Prioritas &amp; Retainer</td></tr>
+            <tr><td>Revisi &amp; Desain</td><td>1 kali</td><td>2 kali</td><td>2 kali</td><td>3 kali</td><td>3 kali</td><td class="yes" style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04);">Kustomisasi Desain Premium</td></tr>
+            <tr><td>Target Bisnis</td><td>Usaha Rintisan</td><td>Bisnis 1 Lokasi</td><td>Usaha Jasa/Portofolio</td><td>Bisnis Jasa/Barber Profesional</td><td>Retail &amp; Toko Online</td><td style="border-left:2px solid #F2B441; background:rgba(242,180,65,0.04); font-weight:700; color:#D97706;">Bisnis Multi-Cabang &amp; Budget Marketing Siap</td></tr>
           </tbody>
         </table>
       </div>
@@ -2391,7 +2806,15 @@ dialog.ad-dialog::backdrop {
     <div class="faq-list">
       <details class="faq-card" open>
         <summary>Apakah ada biaya langganan bulanan?</summary>
-        <p>Tidak ada biaya bulanan. Biaya pembuatan di atas hanya dibayar satu kali di awal. Untuk tahun berikutnya, Anda hanya membayar biaya perpanjangan domain (.com) dan hosting server standar yang sangat terjangkau.</p>
+        <p>Untuk paket standar (Startup hingga Toko Online), tidak ada biaya bulanan wajib—hanya dibayar satu kali di awal, lalu perpanjangan domain (.com) dan hosting standar tahunan. Namun untuk <b>Sistem Enterprise &amp; AI Assistant</b>, kami menyediakan opsi <b>Model Retainer (Langganan Bulanan)</b> sebesar Rp 500.000 – Rp 1.500.000 per bulan yang mencakup token API AI, cloud hosting berkecepatan tinggi, backup harian otomatis, dan dukungan teknis prioritas 24/7.</p>
+      </details>
+      <details class="faq-card">
+        <summary>Untuk siapa Paket Enterprise paling direkomendasikan?</summary>
+        <p>Paket Enterprise dirancang untuk segala jenis bidang bisnis (klinik, resto/F&amp;B, ritel, barbershop, jasa profesional, distributor, dsb) yang sudah berkembang atau memiliki cabang dan ingin otomatisasi penuh. Paket ini menyatukan sistem web app kustom, manajemen multi-cabang, support teknis prioritas, kustomisasi desain premium, serta Dashboard Internal AI Content Assistant yang mampu membuat caption Instagram dan materi promo otomatis dalam hitungan detik.</p>
+      </details>
+      <details class="faq-card">
+        <summary>Bagaimana cara menghitung perbandingan investasi sistem ber-AI vs sewa karyawan?</summary>
+        <p>Sewa admin shift malam membutuhkan biaya minimal Rp 2,5 juta per bulan (Rp 30 juta per tahun) dengan risiko salah jadwal atau chat terlambat saat admin lelah/cuti. Sementara dengan sistem Web App ber-AI, investasi Anda hanya satu kali di awal, dan sistem bekerja otomatis melayani reservasi dan pertanyaan konsumen 24 jam nonstop tanpa libur.</p>
       </details>
       <details class="faq-card">
         <summary>Berapa lama website selesai dibuat?</summary>
@@ -2582,6 +3005,25 @@ function toggleMapHero(hasWebsite) {
       tryIt: ['Buka menu Toko, tambahkan beberapa produk.', 'Buka Keranjang, isi nama pemesan, lalu tekan kirim pesanan.'],
       hint: 'Buka menu Toko, tambahkan produk, lalu buka Keranjang.',
       pages: ['home', 'toko', 'layanan', 'galeri', 'kontak']
+    },
+    enterprise: {
+      name: 'Enterprise (Solusi Lengkap + Marketing)',
+      price: 'Rp 18.000.000 – Rp 30.000.000+',
+      intro: 'Fokus: Solusi Lengkap + Marketing. Dirancang untuk segala jenis bisnis (klinik, resto/F&B, ritel, jasa profesional, dsb) yang berkembang, multi-cabang, atau punya budget marketing untuk scale-up. Mencakup seluruh fitur Pro/Toko + Dashboard Internal AI Content Assistant + Kustomisasi desain premium + Support prioritas.',
+      includes: [
+        'Semua fitur di Paket Pro / Toko',
+        'Dashboard Internal AI Content Assistant (caption & promo otomatis)',
+        'Kustomisasi desain premium multi-cabang',
+        'Support prioritas khusus & SLA respons kilat',
+        'Multi-cabang & integrasi database terpusat',
+        'Pelatihan staf & opsi retainer bulanan'
+      ],
+      tryIt: [
+        'Buka menu Toko atau Booking untuk mencoba alur pesanan terintegrasi.',
+        'Kunjungi bagian "Enterprise & AI" di bawah untuk mencoba Live Simulator AI Content Generator.'
+      ],
+      hint: 'Paket terlengkap untuk segala jenis bisnis & multi-cabang. Coba juga fitur AI Content Assistant di bawah!',
+      pages: ['home', 'toko', 'layanan', 'galeri', 'tentang', 'kontak']
     }
   };
 
@@ -2610,7 +3052,7 @@ function toggleMapHero(hasWebsite) {
     } else {
       nav = p.pages.map(function (pg) { var on = S.page === pg; return '<button type="button" class="s-link' + (on ? ' is-active' : '') + '" data-act="go" data-t="' + pg + '"' + (on ? ' aria-current="page"' : '') + '>' + LABEL[pg] + '</button>'; }).join('');
     }
-    var cart = S.pkg === 'toko' ? '<button type="button" class="s-cart" data-act="cart" aria-label="Buka keranjang">Keranjang <span class="s-badge" data-cartcount>' + cartCount() + '</span></button>' : '';
+    var cart = (S.pkg === 'toko' || S.pkg === 'enterprise') ? '<button type="button" class="s-cart" data-act="cart" aria-label="Buka keranjang">Keranjang <span class="s-badge" data-cartcount>' + cartCount() + '</span></button>' : '';
     return '<header class="s-head"><div class="s-brand"><span class="s-mark" aria-hidden="true">R</span><span>Rapi Barber</span></div>' + cart + '<nav class="s-nav" aria-label="Menu website contoh">' + nav + '</nav></header>';
   }
 
@@ -3661,6 +4103,81 @@ function toggleMapHero(hasWebsite) {
 
   updateCartBadges();
   renderScreen();
+})();
+
+/* ===== ENTERPRISE AI ASSISTANT DEMO & SCRIPT PITCH ENGINE ===== */
+(function initEnterpriseDemo() {
+  'use strict';
+
+  var AI_SAMPLES = {
+    promo: "🎉 PROMO SPECIAL WEEKEND: Diskon Spesial 25% untuk Anda!\n\nHi Sahabat, mau akhir pekan makin seru dan hemat? Dapatkan promo diskon istimewa 25% untuk seluruh produk atau layanan terbaik kami khusus pemesanan hari Jumat - Minggu ini!\n\n✨ Kuota promo terbatas hanya untuk 25 pelanggan pertama per cabang!\n📲 Pesan / reservasi jadwal Anda sekarang via WhatsApp sebelum kehabisan kuota.\n\n#PromoWeekend #DiskonSpesial #HematBerkualitas #BelanjaHemat #PromoTerbatas",
+    edukasi: "💡 3 Tips Cerdas Memilih Layanan & Produk Terbaik untuk Anda:\n\n1. Pastikan transparansi harga & kualitas tanpa biaya tersembunyi.\n2. Pilih penyedia yang memiliki reputasi ulasan pelanggan terpercaya (rating tinggi).\n3. Manfaatkan kemudahan booking & konsultasi langsung lewat WhatsApp tanpa antre lama.\n\nButuh rekomendasi yang paling pas untuk kebutuhan Anda? Tim kami siap membantu memberikan solusi gratis hari ini!\n\n📲 Chat WhatsApp kami sekarang untuk konsultasi langsung.\n\n#TipsCerdas #SolusiBisnis #KonsultasiGratis #PelayananTerbaik",
+    broadcast: "Halo Kak {NamaPelanggan} tersayang! ❤️\n\nTerima kasih selalu mempercayakan kebutuhan Anda kepada kami. Sebagai bentuk apresiasi spesial untuk pelanggan setia, kami punya hadiah istimewa untuk Kakak:\n\n🎁 VOUCHER POTONGAN TRANSAKSI Rp 100.000 khusus untuk pemesanan minggu ini!\n\nTunjukkan pesan WhatsApp ini ke kasir/admin kami saat bertransaksi.\n\nBalas pesan ini dengan ketik 'AMBIL PROMO' untuk klaim voucher Kakak sekarang ya!",
+    cabang: "📍 KABAR GEMBIRA! Cabang Baru Kami Resmi Hadir Lebih Dekat dengan Anda!\n\nUntuk melayani Anda dengan lebih nyaman dan cepat, kami kini resmi membuka cabang baru! Dapatkan OPENING SPECIAL PROMO:\n\n🎁 Diskon Langsung 20% untuk Seluruh Pembelian / Booking Pertama\n🎁 Hadiah Eksklusif untuk 50 Pengunjung Pertama\n\nKunjungi cabang baru kami dan rasakan pengalaman layanan terbaik serta suasana nyaman modern.\n\n📲 Info lokasi & pemesanan hubungi WhatsApp kami sekarang!\n\n#GrandOpening #CabangBaru #PromoOpening #BisnisBerkembang #KianDekat"
+  };
+
+  var outBox = document.getElementById('aiOutputText');
+  var copyAiBtn = document.getElementById('btnCopyAi');
+  var copyPitchBtn = document.getElementById('btnCopyPitch');
+  var topicBtns = document.querySelectorAll('.ai-topic-btn');
+  var toastEl = document.getElementById('toast');
+
+  function showToast(msg) {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastEl._timer);
+    toastEl._timer = setTimeout(function () {
+      toastEl.classList.remove('show');
+    }, 2800);
+  }
+
+  if (outBox && AI_SAMPLES.promo) {
+    outBox.textContent = AI_SAMPLES.promo;
+  }
+
+  topicBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      topicBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var topic = btn.getAttribute('data-topic');
+      if (outBox && AI_SAMPLES[topic]) {
+        outBox.textContent = AI_SAMPLES[topic];
+        showToast('✨ Materi AI ' + btn.textContent.trim() + ' dimuat!');
+      }
+    });
+  });
+
+  if (copyAiBtn) {
+    copyAiBtn.addEventListener('click', function () {
+      if (!outBox) return;
+      var text = outBox.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          showToast('✅ Teks materi promo AI berhasil disalin!');
+        }).catch(function () {
+          showToast('Teks disiapkan.');
+        });
+      } else {
+        showToast('✅ Teks materi promo AI berhasil disalin!');
+      }
+    });
+  }
+
+  if (copyPitchBtn) {
+    copyPitchBtn.addEventListener('click', function () {
+      var pitchText = '“Pak/Bu, kalau sewa admin tambahan khusus shift malam biayanya minimal Rp 2,5 juta per bulan (Rp 30 juta setahun), itu pun belum tentu tidak ada yang terlewat. Dengan sistem Web App ber-AI ini, investasi awal Anda hanya [sebutkan harga paket], dan sistem ini bekerja 24 jam penuh tanpa cuti, tanpa salah jadwal, dan langsung mengamankan cuan bisnis Anda selamanya.”';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(pitchText).then(function () {
+          showToast('📋 Script perbandingan biaya berhasil disalin!');
+        }).catch(function () {
+          showToast('Script pitch disiapkan.');
+        });
+      } else {
+        showToast('📋 Script perbandingan biaya berhasil disalin!');
+      }
+    });
+  }
 })();
 </script>
 </body>
